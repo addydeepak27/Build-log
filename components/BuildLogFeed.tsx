@@ -35,7 +35,7 @@ export default function BuildLogFeed({ initialLogs }: BuildLogFeedProps) {
   if (logs.length === 0) {
     return (
       <div className="text-center py-16">
-        <p className="text-zinc-600 text-sm">
+        <p className="text-zinc-400 dark:text-zinc-600 text-sm">
           No ships yet. Be the first to log one above.
         </p>
       </div>

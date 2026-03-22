@@ -1,6 +1,7 @@
 import { supabase } from '@/lib/supabase';
 import BuildLogForm from '@/components/BuildLogForm';
 import BuildLogFeed from '@/components/BuildLogFeed';
+import ThemeToggle from '@/components/ThemeToggle';
 import type { BuildLog } from '@/types';
 
 async function getInitialLogs(): Promise<BuildLog[]> {
@@ -22,13 +23,16 @@ export default async function Home() {
   const initialLogs = await getInitialLogs();
 
   return (
-    <main className="min-h-screen bg-zinc-950">
-      <header className="border-b border-zinc-800 sticky top-0 z-10 backdrop-blur-sm bg-zinc-950/90">
-        <div className="max-w-2xl mx-auto px-4 py-4">
-          <h1 className="text-xl font-bold text-zinc-100 tracking-tight">
-            Build Log
-          </h1>
-          <p className="text-sm text-zinc-500 mt-0.5">What did you ship today?</p>
+    <main className="min-h-screen bg-zinc-100 dark:bg-zinc-950 transition-colors duration-200">
+      <header className="border-b border-zinc-200 dark:border-zinc-800 sticky top-0 z-10 backdrop-blur-sm bg-zinc-100/90 dark:bg-zinc-950/90 transition-colors duration-200">
+        <div className="max-w-2xl mx-auto px-4 py-4 flex items-center justify-between">
+          <div>
+            <h1 className="text-xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
+              Build Log
+            </h1>
+            <p className="text-sm text-zinc-500 mt-0.5">What did you ship today?</p>
+          </div>
+          <ThemeToggle />
         </div>
       </header>
 

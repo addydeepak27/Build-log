@@ -64,7 +64,7 @@ export default function BuildLogCard({ log }: BuildLogCardProps) {
   const avatarColor = getAvatarColor(log.name);
 
   return (
-    <article className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 hover:border-zinc-700 transition-colors duration-150 animate-slide-down">
+    <article className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-xl p-4 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors duration-150 animate-slide-down">
       <div className="flex items-center gap-3 mb-3">
         <div
           className={`${avatarColor} w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold select-none`}
@@ -73,18 +73,18 @@ export default function BuildLogCard({ log }: BuildLogCardProps) {
           {initials}
         </div>
         <div className="flex-1 min-w-0">
-          <span className="font-bold text-zinc-100 text-sm">{log.name}</span>
+          <span className="font-bold text-zinc-900 dark:text-zinc-100 text-sm">{log.name}</span>
         </div>
         <time
           dateTime={log.created_at}
-          className="text-xs text-zinc-500 flex-shrink-0"
+          className="text-xs text-zinc-400 dark:text-zinc-500 flex-shrink-0"
           suppressHydrationWarning
         >
           {relativeTime}
         </time>
       </div>
 
-      <p className="text-zinc-300 text-sm leading-relaxed whitespace-pre-wrap">
+      <p className="text-zinc-600 dark:text-zinc-300 text-sm leading-relaxed whitespace-pre-wrap">
         {log.description}
       </p>
 
@@ -94,7 +94,7 @@ export default function BuildLogCard({ log }: BuildLogCardProps) {
             href={log.project_link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-indigo-400 hover:text-indigo-300 text-sm font-medium transition-colors duration-100"
+            className="inline-flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 text-sm font-medium transition-colors duration-100"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
