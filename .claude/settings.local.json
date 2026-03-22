@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npm show:*)",
+      "Read(//Users/adityadeepak/**)",
+      "Bash(npx create-next-app@latest build-log --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --no-turbopack --yes)"
+    ]
+  }
+}
