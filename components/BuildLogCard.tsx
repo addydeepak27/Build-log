@@ -78,7 +78,7 @@ export default function BuildLogCard({ log }: BuildLogCardProps) {
         <time
           dateTime={log.created_at}
           className="text-xs text-zinc-500 flex-shrink-0"
-          title={new Date(log.created_at).toLocaleString()}
+          suppressHydrationWarning
         >
           {relativeTime}
         </time>
